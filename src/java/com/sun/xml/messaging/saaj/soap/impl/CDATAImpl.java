@@ -45,11 +45,13 @@ import java.util.logging.Logger;
 import javax.xml.soap.SOAPElement;
 import javax.xml.soap.SOAPException;
 
+import org.apache.xerces.dom.CDATASectionImpl;
+
 import com.sun.xml.messaging.saaj.soap.SOAPDocumentImpl;
 import com.sun.xml.messaging.saaj.util.LogDomainConstants;
 
 public class CDATAImpl
-    extends com.sun.org.apache.xerces.internal.dom.CDATASectionImpl
+    extends CDATASectionImpl
     implements javax.xml.soap.Text {
 
     protected static final Logger log =

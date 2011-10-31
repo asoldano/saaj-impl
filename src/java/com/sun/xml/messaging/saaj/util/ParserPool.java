@@ -41,6 +41,8 @@
 package com.sun.xml.messaging.saaj.util;
 
 
+import org.apache.xerces.jaxp.SAXParserFactoryImpl;
+import org.apache.xerces.util.SymbolTable;
 import org.xml.sax.SAXException;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
@@ -63,7 +65,7 @@ public class ParserPool {
         this.capacity = capacity;
         queue = new ArrayBlockingQueue(capacity);
         //factory = SAXParserFactory.newInstance();
-        factory = new com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl();
+        factory = new SAXParserFactoryImpl();
         factory.setNamespaceAware(true);
         for (int i=0; i < capacity; i++) {
            try {
@@ -112,7 +114,7 @@ public class ParserPool {
      private void resetSaxParser(SAXParser parser) {
         try {
             //Object obj = parser.getProperty("http://apache.org/xml/properties/internal/symbol-table");
-            com.sun.org.apache.xerces.internal.util.SymbolTable table = new com.sun.org.apache.xerces.internal.util.SymbolTable();
+            SymbolTable table = new SymbolTable();
             parser.setProperty("http://apache.org/xml/properties/internal/symbol-table", table);
             //obj = parser.getProperty("http://apache.org/xml/properties/internal/symbol-table");
         } catch (SAXNotRecognizedException ex) {

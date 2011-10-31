@@ -67,6 +67,7 @@ import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
 import javax.xml.transform.dom.DOMSource;
 import org.w3c.dom.NodeList;
+import org.apache.xerces.jaxp.DocumentBuilderFactoryImpl;
 
 /*
  * A class that contains test cases that verify some of the bug fixes made.
@@ -338,7 +339,7 @@ public class BugfixesTest extends TestCase {
     public void testSetContentDOMSrc() throws Exception {
 
         DocumentBuilderFactory factory =
-            new com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl();
+            new DocumentBuilderFactoryImpl();
         factory.setNamespaceAware(true);
         DocumentBuilder builder = factory.newDocumentBuilder();
 
@@ -688,7 +689,7 @@ public class BugfixesTest extends TestCase {
     public void testEvelopeNamespacePropogation() throws Exception {
 
         DocumentBuilderFactory factory =
-            new com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl();
+            new DocumentBuilderFactoryImpl();
         factory.setNamespaceAware(true);
         DocumentBuilder builder = factory.newDocumentBuilder();
 
@@ -850,7 +851,7 @@ public class BugfixesTest extends TestCase {
     public void testSOAPBodyAddDocument() throws Exception {
 
         DocumentBuilderFactory factory =
-            new com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl();
+            new DocumentBuilderFactoryImpl();
         factory.setNamespaceAware(true);
         DocumentBuilder builder = factory.newDocumentBuilder();
 
@@ -948,7 +949,7 @@ public class BugfixesTest extends TestCase {
 
         Document document = null;
         DocumentBuilderFactory factory =
-            new com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl();
+            new DocumentBuilderFactoryImpl();
         factory.setNamespaceAware(true);
 
         DocumentBuilder builder = factory.newDocumentBuilder();
@@ -1008,7 +1009,7 @@ public class BugfixesTest extends TestCase {
         try {
             Document document = null;
             DocumentBuilderFactory factory =
-                new com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl();
+                new DocumentBuilderFactoryImpl();
             factory.setNamespaceAware(true);
   
             DocumentBuilder builder = factory.newDocumentBuilder();

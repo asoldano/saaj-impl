@@ -59,7 +59,7 @@ public class JAXPHelper {
 
     static {
         DocumentBuilderFactory factory =
-            new com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl();
+            new org.apache.xerces.jaxp.DocumentBuilderFactoryImpl();
         try {
             builder = factory.newDocumentBuilder();
         } catch (Exception e) {

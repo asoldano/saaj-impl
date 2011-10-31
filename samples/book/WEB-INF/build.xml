@@ -100,6 +100,7 @@
     <include name="saaj-api.jar" />
     <include name="servlet.jar" />
     <include name="jax-qname.jar" />
+    <include name="xerces.jar" />
   </fileset>
 
   <!-- ==================== Init targets ==================== -->

@@ -107,7 +107,7 @@ public class NSDeclTest extends TestCase {
         ByteArrayInputStream bais2 = new ByteArrayInputStream(testDocBytes2);
         InputSource is = new InputSource(bais2);
         DocumentBuilderFactory dbf =
-            new com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl();
+            new org.apache.xerces.jaxp.DocumentBuilderFactoryImpl();
         dbf.setNamespaceAware(true);
         Document doc2 = dbf.newDocumentBuilder().parse(is);
         // Uncomment to enable dumping to see the DOM Node

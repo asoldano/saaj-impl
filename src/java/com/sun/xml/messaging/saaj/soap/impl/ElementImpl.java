@@ -47,6 +47,7 @@ import java.util.logging.Logger;
 import javax.xml.namespace.QName;
 import javax.xml.soap.*;
 
+import org.apache.xerces.dom.ElementNSImpl;
 import org.w3c.dom.*;
 import org.w3c.dom.Node;
 
@@ -57,7 +58,7 @@ import com.sun.xml.messaging.saaj.soap.name.NameImpl;
 import com.sun.xml.messaging.saaj.util.*;
 
 public class ElementImpl
-    extends com.sun.org.apache.xerces.internal.dom.ElementNSImpl
+    extends ElementNSImpl
     implements SOAPElement, SOAPBodyElement {
 
     public static final String DSIG_NS = "http://www.w3.org/2000/09/xmldsig#".intern();

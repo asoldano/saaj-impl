@@ -44,8 +44,8 @@
 */
 package com.sun.xml.messaging.saaj.soap;
 
-import com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl;
-import com.sun.org.apache.xerces.internal.dom.DocumentFragmentImpl;
+import org.apache.xerces.dom.CoreDocumentImpl;
+import org.apache.xerces.dom.DocumentFragmentImpl;
 
 public class SOAPDocumentFragment extends DocumentFragmentImpl {
 

@@ -53,6 +53,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.soap.*;
 
+import org.apache.xerces.jaxp.DocumentBuilderFactoryImpl;
 import org.w3c.dom.Document;
 
 /**
@@ -156,7 +157,7 @@ public class SendingServlet extends HttpServlet {
             String reqBase=urlSB.toString();
 
             DocumentBuilderFactory dbf =
-                new com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl();
+                new DocumentBuilderFactoryImpl();
             dbf.setNamespaceAware(true);
             DocumentBuilder docBuilder = dbf.newDocumentBuilder();
             Document bookInfo = docBuilder.parse(reqBase + "/bookinfo.xml");

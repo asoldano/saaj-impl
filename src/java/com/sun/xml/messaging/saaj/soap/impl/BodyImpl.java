@@ -49,6 +49,7 @@ import javax.xml.soap.*;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import org.apache.xerces.jaxp.DocumentBuilderFactoryImpl;
 import org.w3c.dom.*;
 
 import com.sun.xml.messaging.saaj.SOAPExceptionImpl;
@@ -314,7 +315,7 @@ public abstract class BodyImpl extends ElementImpl implements SOAPBody {
         Document document = null;
         try {
             DocumentBuilderFactory factory = 
-                new com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl();
+               new DocumentBuilderFactoryImpl();
             factory.setNamespaceAware(true);
             DocumentBuilder builder = factory.newDocumentBuilder();
             document = builder.newDocument();

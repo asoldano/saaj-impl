@@ -66,6 +66,7 @@
     <include name="saaj-api.jar" />
     <include name="servlet.jar" />
     <include name="jax-qname.jar" />
+    <include name="xerces.jar" />
   </fileset>
 
   <fileset id="soapprocessor-classpath" dir="${saaj.home}/samples/soapprocessor/lib" >

@@ -46,7 +46,7 @@ package com.sun.xml.messaging.saaj.soap;
 
 import java.util.logging.Logger;
 
-import com.sun.org.apache.xerces.internal.dom.DocumentImpl;
+import org.apache.xerces.dom.DocumentImpl;
 import org.w3c.dom.*;
 
 import com.sun.xml.messaging.saaj.soap.impl.*;

@@ -49,7 +49,7 @@ import com.sun.xml.messaging.saaj.soap.SOAPDocumentImpl;
 import com.sun.xml.messaging.saaj.util.LogDomainConstants;
 
 public class TextImpl
-    extends com.sun.org.apache.xerces.internal.dom.TextImpl
+    extends org.apache.xerces.dom.TextImpl
     implements javax.xml.soap.Text, org.w3c.dom.Text {
 
     protected static final Logger log =

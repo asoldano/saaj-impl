@@ -53,7 +53,7 @@ import com.sun.xml.messaging.saaj.soap.SOAPDocumentImpl;
 import com.sun.xml.messaging.saaj.util.LogDomainConstants;
 
 public class CommentImpl
-    extends com.sun.org.apache.xerces.internal.dom.CommentImpl
+    extends org.apache.xerces.dom.CommentImpl
     implements javax.xml.soap.Text, org.w3c.dom.Comment { 
 
     protected static final Logger log =
